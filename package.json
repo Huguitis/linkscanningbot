@@ -1,0 +1,29 @@
+{
+  "name": "linkscanningbot",
+  "version": "1.0.8",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+"repository": {
+    "type": "git",
+    "url": "https://github.com/Huguitis/linkscanningbot.git"
+  },
+  "keywords": [],
+  "author": "Huguitis",
+  "license": "MIT",
+  "dependencies": {
+    "aoi.js": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "install": "^0.13.0",
+    "node": "^16.13.2",
+    "npm": "^8.5.4"
+  },
+    "bugs": {
+      "url": "https://github.com/Huguitis/linkscanningbot/issues"
+  },
+  "homepage": "https://github.com/Huguitis/linkscanningbot",
+  "description": "An advanced link scanning moderator bot for your discord server!"
+}
