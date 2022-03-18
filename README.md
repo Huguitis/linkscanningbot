@@ -1,4 +1,3 @@
-# linkscanningbot
 # Link Scanning Discord Bot
 1. Create a file named index.js with this content:
 ```js
