@@ -35,7 +35,7 @@ bot.status({
 })
 
 bot.variables({
-PackageVersion: "v1.0.7",
+PackageVersion: "v1.1.5",
 Prefix: setting.BotPrefix,
 BotStatus: setting.BotStatus,
 BotLogs: setting.BotLogs,
@@ -53,6 +53,8 @@ CooldownBetweenScans: setting.CooldownBetweenScans,
 IgnoreServerAdmins: setting.IgnoreServerAdmins,
 DeleteIfMaliciousLink: setting.DeleteIfMaliciousLink,
 BanIfMaliciousLink: setting.BanIfMaliciousLink,
+TimeoutIfMaliciousLink: setting.TimeoutIfMaliciousLink,
+TimeoutTime: setting.TimeoutTime,
 
 BadLinksMessageID: ""
 })
@@ -99,6 +101,7 @@ code:`
 $channelSendMessage[$getVar[ServerLogs];{newEmbed:{color:YELLOW}{description: $getVar[NotifyEmoji] **$if[$getServerVar[ServerLanguage]==Español;El usuario <@$authorID> envió un enlace malicioso (<#$channelID>);$if[$getServerVar[ServerLanguage]==English;The user <@$authorID> sent a malicious link (<#$channelID>);Der Benutzer <@$authorID> hat einen schädlichen Link (<#$channelID>) gesendet.]]:**
 
 $if[$getVar[BanIfMaliciousLink]!=false;{execute:BanIfMaliciousLink};]
+$if[$getVar[TimeoutIfMaliciousLink]!=false;{execute:TimeoutIfMaliciousLink};]
 
 $editMessage[$getGlobalUserVar[BadLinksMessageID];{newEmbed:{description:$getVar[ErrorEmoji] **$if[$getVar[ServerLanguage]==Español;<@$authorID> Ese es un enlace malicioso;$if[$getVar[ServerLanguage]==English;<@$authorID> That's a malicious link;<@$authorID> Das ist ein bösartiger Link]]:**
 - **Parking:** $getObjectProperty[parking]
@@ -126,6 +129,15 @@ code:`
 $deletecommand
 `
 })
+
+bot.awaitedCommand({
+  name: "TimeoutIfMaliciousLink",
+  code:`
+  $timeOutMember[$guildID;$authorID;$getVar[TimeoutTime];no;$if[$getServerVar[ServerLanguage]==Español;Envió un enlace malicioso.;$if[$getServerVar[ServerLanguage]==English;Sent a malicious link.;Bad Link gesendet.]]]
+
+  $onlyIf[$getVar[BanIfMaliciousLink]!=true;]
+  `
+  })
 
 bot.command({
 name: "eval", 
