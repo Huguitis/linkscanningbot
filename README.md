@@ -10,7 +10,7 @@ module.exports = {
   BotPrefix: "!", // For the only existing command: eval
   BotLanguage: "English", // Supporting "Español", "English" and "Deutch"
   BotIntents: "all", // Recomended keeping it to "all"
-  BotOwners: "", // Separate them with ";". Example: "759796588842450944;905883534521139210;738824089128665118"
+  BotOwners: "759796588842450944", // Separate them with ";". Example: "759796588842450944;905883534521139210"
   ApiKey: "", // Get one: https://ipqualityscore.com
   
   BotLogs: false, // Send logs to a discord channel?
@@ -24,9 +24,11 @@ module.exports = {
 
   LinkScanning: true, // Enable/Disable the link scanning
   IgnoreServerAdmins: true, // Ingore Users with perms?
-  DeleteIfMaliciousLink: true, // Delete the link if malicious?
+  DeleteIfMaliciousLink: true, // Delete the link message if malicious?
   BanIfMaliciousLink: false, // Ban the user if malicious?
-  CooldownBetweenScans: "10s", // Ignore messages with link during this time
+  TimeoutIfMaliciousLink: true, // Mute the user if malicious?
+  TimeoutTime: "10m", // Mute time
+  CooldownBetweenScans: "10s", // Ignore links during this time between scans.
   RespondToBots: false, // Scan links from bots?
   RespondOnEdit: { // Recomended keeping it like this:
         commands: false,
@@ -37,7 +39,8 @@ module.exports = {
   // Advanced
   Sharding: false,
   ShardCount: 2,
-  SuppressPackageErrors: true,
+  SuppressPackageErrors: true
 }
 ```
-3. Install the package, setup and start your bot!
+3. Activate all the bot intents in discord developer portal.
+4. Install the package, setup and start your bot!

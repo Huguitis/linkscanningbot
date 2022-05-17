@@ -2,6 +2,8 @@ module.exports = [{
     type: "awaited",
     name: "BotLogsError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "BotLogs"**]
   
     $log[---> Error! There is a problem in following value: "BotLogs"]`
@@ -9,6 +11,8 @@ module.exports = [{
     type: "awaited",
     name: "BotLogsChannelIDError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "BotLogsChannelID", the channel id is not valid.**]
   
     $log[**---> Error! There is a problem in following value: "BotLogsChannelID", the channel id is not valid.**]`
@@ -16,11 +20,15 @@ module.exports = [{
     type: "awaited",
     name: "BotLogsChannelError",
     code: `
+    
+
     $if[$getVar[BotLogsChannelID]==;{execute:BotLogsChannelIDError};]`
 }, {
     type: "awaited",
     name: "SuccessEmojiError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "SuccessEmoji"**]
   
     $log[---> Error! There is a problem in following value: "SuccessEmoji"]`
@@ -28,6 +36,8 @@ module.exports = [{
     type: "awaited",
     name: "ErrorEmojiError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "ErrorEmoji"**]
   
     $log[---> Error! There is a problem in following value: "ErrorEmoji"]`
@@ -35,6 +45,8 @@ module.exports = [{
     type: "awaited",
     name: "LoadingEmojiError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "LoadingEmoji"**]
   
     $log[---> Error! There is a problem in following value: "LoadingEmoji"]`
@@ -42,6 +54,8 @@ module.exports = [{
     type: "awaited",
     name: "PrefixError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "Prefix"**]
   
     $log[---> Error! There is a problem in following value: "Prefix"]`
@@ -49,6 +63,8 @@ module.exports = [{
     type: "awaited",
     name: "ApiKeyError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "ApiKey"**]
   
     $log[---> Error! There is a problem in following value: "ApiKey"]`
@@ -56,6 +72,8 @@ module.exports = [{
     type: "awaited",
     name: "StatusTypeError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "StatusType"**]
   
     $log[---> Error! There is a problem in following value: "StatusType"]`
@@ -63,6 +81,8 @@ module.exports = [{
     type: "awaited",
     name: "RespondToBotsError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "RespondToBots"**]
   
     $log[---> Error! There is a problem in following value: "RespondToBots"]`
@@ -70,6 +90,8 @@ module.exports = [{
     type: "awaited",
     name: "ServerLinkScanError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "ServerLinkScan"**]
   
     $log[---> Error! There is a problem in following value: "ServerLinkScan"]`
@@ -77,6 +99,8 @@ module.exports = [{
     type: "awaited",
     name: "ServerLanguageError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "ServerLanguage"**]
   
     $log[---> Error! There is a problem in following value: "ServerLanguage"]`
@@ -84,6 +108,8 @@ module.exports = [{
     type: "awaited",
     name: "CooldownBetweenScansError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "CooldownBetweenScans"**]
   
     $log[---> Error! There is a problem in following value: "CooldownBetweenScans"]`
@@ -91,6 +117,8 @@ module.exports = [{
     type: "awaited",
     name: "BanIfMaliciousLinkError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "BanIfMaliciousLink"**]
   
     $log[---> Error! There is a problem in following value: "BanIfMaliciousLink"]`
@@ -98,6 +126,8 @@ module.exports = [{
     type: "awaited",
     name: "IgnoreServerAdminsError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "IgnoreServerAdmins"**]
   
     $log[---> Error! There is a problem in following value: "IgnoreServerAdmins"]`
@@ -105,7 +135,27 @@ module.exports = [{
     type: "awaited",
     name: "DeleteIfMaliciousLinkError",
     code: `
+    
+
     $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "DeleteIfMaliciousLink"**]
   
     $log[---> Error! There is a problem in following value: "DeleteIfMaliciousLink"]`
-  }]
+}, {
+    type: "awaited",
+    name: "TimeoutTimeError",
+    code: `
+    
+
+    $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "TimeoutTime"**]
+  
+    $log[---> Error! There is a problem in following value: "TimeoutTime"]`
+}, {
+    type: "awaited",
+    name: "TimeoutIfMaliciousLinkError",
+    code: `
+    
+
+    $channelSendMessage[$getVar[BotLogsChannelID];**---> Error! There is a problem in following value: "TimeoutIfMaliciousLink"**]
+  
+    $log[---> Error! There is a problem in following value: "TimeoutIfMaliciousLink"]`
+}]
