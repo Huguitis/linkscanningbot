@@ -1,5 +1,5 @@
 {
-  "name": "linkscanningbot",
+  "name": "@Huguitis/linkscanningbot",
   "version": "1.1.5",
   "main": "index.js",
   "scripts": {
